@@ -1,0 +1,15 @@
+
+> v8-profiler@5.7.0 preinstall /usr/local/lib/node_modules/node-inspector/node_modules/v8-profiler
+> node -e 'process.exit(0)'
+
+
+> v8-debug@1.0.1 preinstall /usr/local/lib/node_modules/node-inspector/node_modules/v8-debug
+> node -e 'process.exit(0)'
+
+/usr/local/bin/node-inspector -> /usr/local/lib/node_modules/node-inspector/bin/inspector.js
+/usr/local/bin/node-debug -> /usr/local/lib/node_modules/node-inspector/bin/node-debug.js
+
+> v8-debug@1.0.1 install /usr/local/lib/node_modules/node-inspector/node_modules/v8-debug
+> node-pre-gyp install --fallback-to-build
+
+Failed to execute '/usr/local/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/usr/local/lib/node_modules/node-inspector/node_modules/v8-debug/build/debug/v1.0.1/node-v57-darwin-x64/debug.node --module_name=debug --module_path=/usr/local/lib/node_modules/node-inspector/node_modules/v8-debug/build/debug/v1.0.1/node-v57-darwin-x64 --python=true' (1)
