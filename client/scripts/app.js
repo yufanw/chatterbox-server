@@ -46,7 +46,6 @@ var app = {
       success: function (data) {
         // Clear messages input
         app.$message.val('');
-        console.log('sending')
 
         // Trigger a fetch to update the messages, pass true to animate
         app.fetch();
@@ -65,7 +64,6 @@ var app = {
       contentType: 'application/json',
       success: function(data) {
 
-        console.log('fetching')
         // Don't bother if we have nothing to work with
         if (!data.results || !data.results.length) { return; }
 
@@ -222,7 +220,6 @@ var app = {
     };
 
     app.send(message);
-    console.log('submit')
 
     // Stop the form from submitting
     event.preventDefault();

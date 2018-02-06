@@ -28,7 +28,7 @@ var requestParams = [
       roomname: 'test'
     }
   }
-]
+];
 
 describe('server', function() {
   it('should respond to GET requests for /classes/messages with a 200 status code', function(done) {
@@ -64,9 +64,9 @@ describe('server', function() {
 
   it('Should 200 when asked for OPTIONS', function(done) {
     var requestArg = {
-      method:'OPTIONS',
+      method: 'OPTIONS',
       url: 'http://127.0.0.1:3000/classes/messages'
-    }
+    };
     request(requestArg, function(error, response, body) {
       expect(response.statusCode).to.equal(200);
       done();
