@@ -1,8 +1,6 @@
-
-
-var objectIdCounter = 1;
+var counter = 1;
 var messages = [];
-var url = '/classes/messages'
+var url = '/classes/messages';
 
 
 var headers = {
@@ -35,7 +33,7 @@ var makeActionHandler = function(actionMap) {
     if (action && request.url === url) {
       action(request, response);
     } else {
-      sendResponse(response, '', 404);
+      sendResponse(response, 'Not Found', 404);
     }
   };
 };
@@ -46,7 +44,7 @@ var actions = {
   },
   'POST': function(request, response) {
     collectData(request, function(message) {
-      message.objectId = ++objectIdCounter;
+      message.objectId = ++counter;
       messages.push(message);
       sendResponse(response, {objectId: message.objectId}, 201);
     });
