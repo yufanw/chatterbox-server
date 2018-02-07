@@ -1,5 +1,5 @@
-var counter = 1;
 var messages = [];
+var counter = 1;
 var url = '/classes/messages';
 
 
@@ -13,6 +13,7 @@ var headers = {
 
 var sendResponse = function(response, data, statusCode) {
   statusCode = statusCode || 200;
+  console.log('Sending response for code:', statusCode);
   response.writeHead(statusCode, headers);
   response.end(JSON.stringify(data));
 };
